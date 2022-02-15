@@ -19,8 +19,6 @@ public class memberServiceTest {
         //then :  이렇게 된다
         Assertions.assertThat(member).isEqualTo(findMember); //member가 findMember와 동일한지
         System.out.println(member);
-        System.out.println(member);
-        System.out.println(findMember);
         System.out.println(findMember);
     }
 }
