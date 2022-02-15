@@ -21,5 +21,6 @@ public class memberServiceTest {
         System.out.println(member);
         System.out.println(member);
         System.out.println(findMember);
+        System.out.println(findMember);
     }
 }
