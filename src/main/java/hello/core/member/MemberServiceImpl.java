@@ -2,10 +2,13 @@ package hello.core.member;
 
 public class MemberServiceImpl implements MemberService{
 
-    //final은 왜 해주는걸까?
-    // DIP를 따르지 않는다... 무슨말? //추상화에도 의존하고, 구체화에도 의존한단다..
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
 
+    // DIP를 따르지 않는다 > AppConfig 사용하면서 DIP 따름... 생성자 주입
+    private final MemberRepository memberRepository; //new MemoryMemberRepository();
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
     @Override
     public void join(Member member) {
         memberRepository.save(member);
