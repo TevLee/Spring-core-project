@@ -37,7 +37,6 @@ public class OrderServiceImpl implements OrderService{
          */
         // 이 클래스에서 discount에 대한 부분은 생성된 discountPolicy 객체에게 넘김
         int discountPrice = discountPolicy.discount(member, itemPrice);
-
         ////Order 객체 생성시켜서 리턴
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
